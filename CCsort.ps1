@@ -8,7 +8,7 @@ $DuplicateCount = 0
 
 if ($Count -EQ 0) {"No file(s) with name $Name found. Exiting."; Exit 0}
 
-if (!(Test-Path -Path $Name -PathType "Container")) {
+if (!(Test-Path -Path "..\$Name" -PathType "Container")) {
     New-Item -Path "..\" -Name "$Name" -ItemType "Directory"
 }
 
